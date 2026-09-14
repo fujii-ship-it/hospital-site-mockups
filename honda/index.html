@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<title>本多病院サイト リニューアル案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2B2A28;
+  --gray:#4D4D4D;
+  --muted:#8A8781;
+  --line:#E6E3DD;
+  --paper:#FBFAF7;
+  --orange:#E87818;
+  --orange-soft:#FDF2E6;
+  --maru:"Zen Maru Gothic",'Hiragino Maru Gothic ProN','Hiragino Sans','Yu Gothic',sans-serif;
+  --en:"Raleway","Zen Maru Gothic",sans-serif;
+  --maxw:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--maru);color:var(--gray);background:#fff;font-size:15.5px;line-height:2.0;letter-spacing:.06em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.narrow{max-width:840px;margin:0 auto;padding:0 28px}
+
+.mockbar{background:#B3261E;color:#fff;font-size:12.5px;padding:11px 16px;text-align:center;letter-spacing:.06em;line-height:1.8;position:relative;z-index:100}
+.mockbar b{color:#FFE08A}
+
+/* ---- header ---- */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:28px;height:80px}
+.hd .logo img{height:44px;width:auto}
+nav.main{margin-left:auto;display:flex;gap:28px;font-size:13.5px;letter-spacing:.08em}
+nav.main a{text-decoration:none;color:var(--ink);padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
+nav.main a:hover{border-color:var(--orange);color:var(--orange)}
+.hd-tel{text-align:right;line-height:1.5}
+.hd-tel a{font-family:var(--en);font-size:21px;color:var(--ink);text-decoration:none;font-weight:600;letter-spacing:.02em}
+.hd-tel span{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;border-radius:999px;text-decoration:none;font-size:13.5px;letter-spacing:.1em;transition:.25s;border:1px solid transparent;white-space:nowrap}
+.btn-o{background:var(--orange);color:#fff}
+.btn-o:hover{background:#CF670D}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-w{background:#fff;color:var(--ink)}
+.btn-w:hover{background:var(--orange);color:#fff}
+.menubtn{display:none;background:none;border:0;font-size:22px;color:var(--ink);cursor:pointer;margin-left:auto}
+
+/* ---- hero ---- */
+.hero{position:relative;height:min(84vh,660px);overflow:hidden;background:#ddd}
+.hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.62) brightness(.72) contrast(1.02)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,18,14,.84) 0%,rgba(22,18,14,.58) 45%,rgba(22,18,14,.14) 82%,rgba(22,18,14,0) 100%)}
+.hero-txt{position:absolute;inset:0;z-index:3;display:flex;align-items:center}
+.hero-txt .eyebrow{font-family:var(--en);font-size:11px;letter-spacing:.34em;color:#FFC178;margin-bottom:26px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.hero-txt h1{font-size:clamp(22px,3.5vw,34px);line-height:2.1;letter-spacing:.12em;color:#fff;font-weight:500;margin:0 0 30px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero-txt p{color:#fff;max-width:470px;font-size:14.5px;line-height:2.1;margin:0 0 34px;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.hero-note{position:absolute;right:14px;bottom:10px;z-index:4;font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.08em}
+
+/* ---- hours bar ---- */
+.hours{background:var(--paper);border-bottom:1px solid var(--line)}
+.hours .wrap{display:flex;align-items:center;gap:30px;padding-top:22px;padding-bottom:22px;flex-wrap:wrap;font-size:13.5px}
+.hours .lab{font-size:12px;letter-spacing:.16em;color:var(--muted)}
+.hours b{color:var(--ink);font-family:var(--en);font-size:16px;letter-spacing:.04em}
+.hours .emg{margin-left:auto;display:inline-flex;align-items:center;gap:9px;background:var(--orange-soft);color:#B75E0C;padding:9px 20px;border-radius:999px;font-size:12.5px;letter-spacing:.08em}
+.hours .emg::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+
+/* ---- section ---- */
+section{padding:110px 0}
+.sec-head{margin-bottom:52px}
+.sec-head.center{text-align:center}
+.sec-en{display:block;font-family:var(--en);font-size:10.5px;letter-spacing:.36em;color:var(--orange);margin-bottom:14px}
+.sec-head h2{font-size:clamp(21px,2.6vw,29px);line-height:1.85;letter-spacing:.16em;color:var(--ink);font-weight:500;margin:0}
+.sec-head .lead{font-size:14.5px;color:var(--gray);margin:20px 0 0;max-width:640px;line-height:2.1}
+.sec-head.center .lead{margin-left:auto;margin-right:auto}
+.paper{background:var(--paper)}
+
+/* ---- philosophy ---- */
+.philo{text-align:center;padding:120px 0}
+.philo .mark{width:52px;margin:0 auto 34px;opacity:.9}
+.philo p{font-size:clamp(16px,2.1vw,20px);line-height:2.5;letter-spacing:.14em;color:var(--ink);margin:0 0 30px}
+.philo .sign{font-size:13px;color:var(--muted);letter-spacing:.1em;margin-top:44px}
+
+/* ---- gates ---- */
+.gates{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.gate{text-decoration:none;display:block;group:none}
+.gate .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden;margin-bottom:22px;background:#eee}
+.gate .ph img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1);filter:saturate(.88)}
+.gate:hover .ph img{transform:scale(1.06)}
+.gate .en{font-family:var(--en);font-size:10px;letter-spacing:.3em;color:var(--orange);display:block;margin-bottom:9px}
+.gate h3{font-size:20px;letter-spacing:.14em;color:var(--ink);margin:0 0 10px;font-weight:500;display:flex;align-items:center;gap:12px}
+.gate h3 svg{flex:none}
+.gate p{font-size:13.5px;color:var(--muted);margin:0 0 14px;line-height:1.95}
+.gate .go{font-size:12.5px;letter-spacing:.12em;color:var(--ink);display:inline-flex;align-items:center;gap:10px}
+.gate .go::after{content:"";width:22px;height:1px;background:var(--orange);transition:.3s}
+.gate:hover .go::after{width:38px}
+
+/* ---- news ---- */
+.news-grid{display:grid;grid-template-columns:270px 1fr;gap:60px;align-items:start}
+.newslist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.newslist li{border-bottom:1px solid var(--line)}
+.newslist a{display:flex;gap:22px;align-items:baseline;padding:22px 2px;text-decoration:none;flex-wrap:wrap;transition:.25s}
+.newslist a:hover{padding-left:10px}
+.newslist time{font-family:var(--en);font-size:13px;color:var(--muted);letter-spacing:.06em;white-space:nowrap}
+.tag{font-size:10.5px;padding:3px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);letter-spacing:.1em;white-space:nowrap}
+.tag.imp{background:var(--orange);border-color:var(--orange);color:#fff}
+.newslist .ttl{font-size:14.5px;flex:1;min-width:210px;color:var(--ink);line-height:1.85}
+.newslist a:hover .ttl{color:var(--orange)}
+
+/* ---- community (photo band) ---- */
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{text-decoration:none;display:block}
+.card .ph{aspect-ratio:3/2;overflow:hidden;border-radius:4px;margin-bottom:18px;background:#eee}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1);filter:saturate(.88)}
+.card:hover .ph img{transform:scale(1.05)}
+.card .meta{font-family:var(--en);font-size:11px;color:var(--muted);letter-spacing:.14em;margin-bottom:7px}
+.card h4{font-size:15.5px;letter-spacing:.1em;color:var(--ink);margin:0 0 8px;font-weight:500;line-height:1.85}
+.card p{font-size:13px;color:var(--muted);margin:0;line-height:1.9}
+
+/* ---- split ---- */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.split.rev{direction:rtl}
+.split.rev>*{direction:ltr}
+.split .ph{border-radius:4px;overflow:hidden;background:#eee}
+.split .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.88)}
+.split h3{font-size:clamp(19px,2.3vw,25px);letter-spacing:.14em;color:var(--ink);margin:0 0 24px;font-weight:500;line-height:2}
+.split p{font-size:14.5px;line-height:2.15;margin:0 0 22px}
+
+/* ---- schedule table ---- */
+.tablewrap{overflow-x:auto}
+table.sched{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;background:#fff}
+table.sched th,table.sched td{padding:17px 10px;text-align:center;border-bottom:1px solid var(--line)}
+table.sched thead th{font-family:var(--en);font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:500;border-bottom:1px solid var(--ink)}
+table.sched thead th:first-child{text-align:left;padding-left:4px;font-family:var(--maru)}
+table.sched tbody th{text-align:left;padding-left:4px;font-weight:400;color:var(--ink);white-space:nowrap;letter-spacing:.1em}
+table.sched tbody th small{display:block;font-family:var(--en);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+table.sched td{font-size:15px;color:var(--orange)}
+table.sched td.off{color:#D5D2CC}
+.note{font-size:12.5px;color:var(--muted);margin-top:22px;line-height:2}
+
+/* ---- depts ---- */
+.depts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:56px}
+.depts span{border:1px solid var(--line);padding:11px 22px;border-radius:999px;font-size:13.5px;letter-spacing:.08em;color:var(--ink)}
+.depts span.main{border-color:var(--orange);color:var(--orange)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.feat .ic{margin-bottom:18px}
+.feat h3{font-size:16px;letter-spacing:.12em;color:var(--ink);margin:0 0 12px;font-weight:500;line-height:1.9}
+.feat p{font-size:13.5px;color:var(--muted);margin:0;line-height:2}
+
+/* ---- people ---- */
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.person{text-decoration:none;display:block}
+.person .ph{aspect-ratio:3/4;border-radius:4px;overflow:hidden;background:linear-gradient(150deg,#F2EFE9,#E4E0D8);margin-bottom:16px;display:flex;align-items:center;justify-content:center;color:#A39D92;font-family:var(--en);font-size:11px;letter-spacing:.22em}
+.person .ph img{width:100%;height:100%;object-fit:cover;transition:.7s;filter:saturate(.88)}
+.person:hover .ph img{transform:scale(1.05)}
+.person .role{font-size:11.5px;color:var(--orange);letter-spacing:.14em;margin-bottom:5px}
+.person .nm{font-size:17px;letter-spacing:.14em;color:var(--ink)}
+.person .dept{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.08em}
+
+/* ---- recruit ---- */
+.recruit{position:relative;min-height:440px;display:flex;align-items:center;overflow:hidden}
+.recruit>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.66)}
+.recruit::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(22,18,14,.74) 0%,rgba(22,18,14,.46) 50%,rgba(22,18,14,.06) 100%)}
+.recruit .wrap{position:relative;z-index:3;color:#fff}
+.recruit h2{font-size:clamp(21px,2.8vw,30px);line-height:2.1;letter-spacing:.14em;font-weight:500;margin:0 0 24px;text-shadow:0 2px 18px rgba(0,0,0,.3)}
+.recruit p{color:#fff;max-width:480px;margin:0 0 34px;font-size:14.5px;line-height:2.1;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.recruit .acts{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---- access ---- */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.mapbox{aspect-ratio:4/3;background:var(--paper);border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--en);font-size:11px;letter-spacing:.2em}
+dl.info{margin:0}
+dl.info div{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
+dl.info dt{font-size:12px;color:var(--muted);letter-spacing:.14em;padding-top:3px}
+dl.info dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.95}
+
+/* ---- footer ---- */
+footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;font-size:13.5px;letter-spacing:.06em}
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)}
+.f-logo{margin-bottom:20px}
+.f-logo img{height:40px;filter:brightness(0) invert(1);opacity:.92}
+.f-col h5{font-family:var(--en);font-size:10.5px;letter-spacing:.28em;color:#FFC178;margin:0 0 18px;font-weight:500}
+.f-col ul{list-style:none;margin:0;padding:0}
+.f-col li{margin-bottom:12px}
+.f-col a{text-decoration:none;font-size:13px;opacity:.82;transition:.25s}
+.f-col a:hover{opacity:1;color:#FFC178}
+.f-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:11px;opacity:.5;flex-wrap:wrap;gap:10px;letter-spacing:.08em}
+
+@media(max-width:980px){
+  .gates,.band,.feats{grid-template-columns:1fr}
+  .people{grid-template-columns:repeat(2,1fr)}
+  .news-grid,.access,.split{grid-template-columns:1fr;gap:32px}
+  .split.rev{direction:ltr}
+  .f-top{grid-template-columns:1fr 1fr}
+  nav.main,.hd-tel,.hd .btn{display:none}
+  .menubtn{display:block}
+  section{padding:70px 0}
+  .philo{padding:80px 0}
+  .hours .emg{margin-left:0}
+}
+@media(max-width:540px){
+  .people{grid-template-columns:1fr 1fr}
+  .f-top{grid-template-columns:1fr}
+  body{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<div class="mockbar">⚠️ <b>これは本多病院さまの公式サイトではありません。</b>リニューアルの方針を話し合うための<b>叩き台（モックアップ）</b>です。写真・文言はすべて仮置きで、内容の正確性は保証されません。</div>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#"><img src="images/hp_logo.png" alt="医療法人社団 静恒会 本多病院"></a>
+    <nav class="main">
+      <a href="#gates">はじめての方へ</a>
+      <a href="#sched">診療時間</a>
+      <a href="#rehab">リハビリ</a>
+      <a href="#community">地域とともに</a>
+      <a href="#people">はたらく人</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <div class="hd-tel"><a href="tel:0337322331">03-3732-2331</a><span>代表／急患24時間受付</span></div>
+    <a class="btn btn-o" href="#recruit">採用情報</a>
+    <button class="menubtn" aria-label="メニュー">☰</button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <img src="images/hp_kv05.jpg" alt="本多病院 外観">
+  <div class="hero-txt">
+    <div class="wrap">
+      <span class="eyebrow">COMMUNITY HOSPITAL — OTA CITY, HASUNUMA</span>
+      <h1>ひとの物語に寄り添い、<br>このまちと、新しい未来へ。</h1>
+      <p>治すだけでなく、支える医療を。外来・入院・リハビリテーションをこの場所でつなぎ、蓮沼のまちで暮らし続ける人の毎日を支えています。</p>
+      <a class="btn btn-w" href="#gates">はじめての方へ</a>
+    </div>
+  </div>
+  <div class="hero-note">※写真は仮。撮り下ろし推奨</div>
+</div>
+
+<!-- ===== 診療時間バー ===== -->
+<div class="hours">
+  <div class="wrap">
+    <span class="lab">診療受付</span>
+    <span>午前 <b>9:00 – 12:00</b> 月〜土</span>
+    <span>午後 <b>15:00 – 17:00</b> 水・金</span>
+    <span>休診 日曜・祝日・土曜午後</span>
+    <span class="emg">急患は24時間受付けます</span>
+  </div>
+</div>
+
+<!-- ===== 理念 ===== -->
+<div class="philo">
+  <div class="narrow">
+    <img class="mark" src="images/hp_mark.png" alt="" style="height:52px;width:auto;margin:0 auto 34px;display:block">
+    <p>病気になってから出会う場所ではなく、<br>病気になる前も、その後も。<br>「ここがあるから大丈夫」と思える病院でありたい。</p>
+    <p style="font-size:14.5px;line-height:2.3;color:var(--gray);letter-spacing:.1em">私たちは総合診療を軸に、外来・入院・リハビリテーションをワンストップで提供するコミュニティホスピタルです。病気だけを診るのではなく、その人の暮らしと人生を診る医療を、大田区・蓮沼のまちで実践しています。</p>
+    <div class="sign">医療法人社団 静恒会 本多病院　院長　石川 輝</div>
+  </div>
+</div>
+
+<!-- ===== 3つの入口 ===== -->
+<section id="gates" class="paper">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="sec-en">FOR PATIENTS</span>
+      <h2>はじめての方へ</h2>
+      <p class="lead">受診の流れ、持ち物、面会のご案内など、必要な情報をまとめています。</p>
+    </div>
+    <div class="gates">
+      <a class="gate" href="#">
+        <div class="ph"><img src="images/hp_kv03.jpg" alt="本多病院 受付・待合"></div>
+        <span class="en">OUTPATIENT</span>
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>外来を受診する</h3>
+        <p>初診の流れ・持ち物・各診療科の担当医表</p>
+        <span class="go">外来のご案内</span>
+      </a>
+      <a class="gate" href="#">
+        <div class="ph"><img src="images/15_gyojishoku.jpg" alt="本多病院 行事食"></div>
+        <span class="en">ADMISSION</span>
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18M6 10V7a2 2 0 0 1 2-2h3v5"/></svg>入院・面会</h3>
+        <p>入院の準備・費用の目安・面会時間のご案内</p>
+        <span class="go">入院のご案内</span>
+      </a>
+      <a class="gate" href="#">
+        <div class="ph"><img src="images/hp_kv01.jpg" alt="本多病院 外観"></div>
+        <span class="en">CHECK-UP</span>
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></svg>健診を受ける</h3>
+        <p>各種健康診断・大田区の健診・企業健診</p>
+        <span class="go">健診のご案内</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お知らせ ===== -->
+<section id="news">
+  <div class="wrap news-grid">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="sec-en">NEWS</span>
+      <h2>お知らせ</h2>
+      <p class="lead" style="font-size:13.5px">休診・診療体制の変更などをお伝えします。</p>
+      <a class="btn btn-line" style="margin-top:26px" href="#">お知らせ一覧へ</a>
+    </div>
+    <ul class="newslist">
+      <li><a href="#"><time>2026.09.10</time><span class="tag imp">重要</span><span class="ttl">〇月〇日（〇）の外来診療体制変更について</span></a></li>
+      <li><a href="#"><time>2026.09.02</time><span class="tag">外来</span><span class="ttl">インフルエンザ予防接種の受付を開始します</span></a></li>
+      <li><a href="#"><time>2026.08.25</time><span class="tag">健診</span><span class="ttl">大田区健康診査・各種がん検診のご案内</span></a></li>
+      <li><a href="#"><time>2026.08.12</time><span class="tag">採用</span><span class="ttl">看護師・リハビリスタッフを募集しています</span></a></li>
+      <li><a href="#"><time>2026.07.30</time><span class="tag">外来</span><span class="ttl">地方厚生局長への届出事項に関するお知らせ</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== リハビリ（split） ===== -->
+<section id="rehab" class="paper">
+  <div class="wrap split">
+    <div class="ph"><img src="images/13_uniform.jpg" alt="本多病院 リハビリテーション室"></div>
+    <div>
+      <span class="sec-en">REHABILITATION</span>
+      <h3>「帰れる体」を、<br>チームでつくる。</h3>
+      <p>運動器（Ⅱ）・呼吸器（Ⅰ）・脳血管疾患等（Ⅲ）のリハビリテーションに対応。理学療法士・作業療法士・言語聴覚士が、医師・看護師・管理栄養士とひとつのチームになって、退院後の暮らしまで見据えた回復を支えます。</p>
+      <p style="font-size:13.5px;color:var(--muted)">心臓リハビリテーション指導士も在籍し、生活習慣病や心疾患のある方の「運動の処方」にも取り組んでいます。</p>
+      <a class="btn btn-line" href="#">リハビリテーションについて</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 地域とともに ===== -->
+<section id="community">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="sec-en">WITH THE COMMUNITY</span>
+      <h2>地域とともに</h2>
+      <p class="lead">病院の中だけでは、人の暮らしは支えきれません。お祭り、健康講座、地域の見守り。まちの人・多職種とつながる場をつくっています。</p>
+    </div>
+    <div class="band">
+      <a class="card" href="#">
+        <div class="ph"><img src="images/12_matsuri.jpeg" alt="はすぬま祭り"></div>
+        <div class="meta">EVENT — 2025.08</div>
+        <h4>はすぬま祭り 2025</h4>
+        <p>地域の皆さん、多職種のスタッフと一緒に。まちの行事に病院として参加しています。</p>
+      </a>
+      <a class="card" href="#">
+        <div class="ph"><img src="images/09_koshi.jpg" alt="地域向け健康講座"></div>
+        <div class="meta">SEMINAR</div>
+        <h4>まちの健康講座</h4>
+        <p>「腰と上手に付き合う方法」など、暮らしに直結するテーマで定期開催しています。</p>
+      </a>
+      <a class="card" href="#">
+        <div class="ph"><img src="images/04_mimamori.jpeg" alt="地域連携の取り組み"></div>
+        <div class="meta">NETWORK</div>
+        <h4>地域の見守りをつなぐ</h4>
+        <p>地域包括支援センター・介護・行政と連携し、小さな安心を支える仕組みづくりに関わっています。</p>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:52px"><a class="btn btn-line" href="#">活動レポートを見る</a></div>
+  </div>
+</section>
+
+<!-- ===== 診療時間・診療科 ===== -->
+<section id="sched" class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">SCHEDULE</span>
+      <h2>診療受付時間と診療科</h2>
+      <p class="lead">診療科によっては休診の情報が反映されていない場合があります。お越しの前にお電話でお確かめください。</p>
+    </div>
+    <div class="tablewrap">
+      <table class="sched">
+        <thead><tr><th>診療受付時間</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr></thead>
+        <tbody>
+          <tr><th>午前<small>9:00 – 12:00</small></th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td class="off">–</td></tr>
+          <tr><th>午後<small>15:00 – 17:00</small></th><td class="off">–</td><td class="off">–</td><td>●</td><td class="off">–</td><td>●</td><td class="off">–</td><td class="off">–</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">休診日：日曜・祝日・土曜日午後　／　急患は24時間受付けます。まずはお電話にてお問い合わせください。　／　各種保険取扱・マイナ受付対応</p>
+    <div style="margin:28px 0 80px"><a class="btn btn-line" href="#">担当医表（外来スケジュール）を見る</a></div>
+
+    <div class="depts">
+      <span class="main">総合診療科</span><span>内科</span><span>整形外科</span><span>リハビリテーション科</span><span>小児科</span>
+      <span>消化器内科</span><span>糖尿病内科</span><span>脳神経内科</span><span>呼吸器内科</span><span>循環器内科</span>
+    </div>
+    <div class="feats">
+      <div class="feat">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.3"><path d="M12 3v18M3 12h18" opacity=".35"/><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div>
+        <h3>東京都指定 二次救急医療機関</h3>
+        <p>休日・全夜間診療事業実施医療機関、東京都脳卒中急性期医療機関の指定を受けています。</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.3"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></div>
+        <h3>検査・医療設備</h3>
+        <p>CTスキャナシステム、X線透視撮影装置、超音波診断装置（心臓・胸腹部ほか）を備えています。</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.3"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></div>
+        <h3>暮らしに寄り添う体制</h3>
+        <p>労災保険・生活保護の指定医療機関。関連施設のケアマネオフィス・老健とも連携しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== はたらく人 ===== -->
+<section id="people">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">OUR TEAM</span>
+      <h2>本多病院ではたらく人たち</h2>
+      <p class="lead">どんな人が診てくれるのかが分かることは、それだけで安心につながります。医師・看護師・リハビリスタッフの顔と、考えていることを紹介します。</p>
+    </div>
+    <div class="people">
+      <a class="person" href="#"><div class="ph">PHOTO</div><div class="role">院長</div><div class="nm">石川 輝</div><div class="dept">総合診療科</div></a>
+      <a class="person" href="#"><div class="ph">PHOTO</div><div class="role">医師</div><div class="nm">〇〇 〇〇</div><div class="dept">内科</div></a>
+      <a class="person" href="#"><div class="ph"><img src="images/13_uniform.jpg" alt=""></div><div class="role">理学療法士</div><div class="nm">〇〇 〇〇</div><div class="dept">リハビリテーション科</div></a>
+      <a class="person" href="#"><div class="ph">PHOTO</div><div class="role">看護部長</div><div class="nm">〇〇 〇〇</div><div class="dept">看護部</div></a>
+    </div>
+    <div style="margin-top:44px"><a class="btn btn-line" href="#">スタッフ紹介をすべて見る</a></div>
+  </div>
+</section>
+
+<!-- ===== 採用 ===== -->
+<div class="recruit" id="recruit">
+  <img src="images/06_recruit.jpeg" alt="本多病院のスタッフ">
+  <div class="wrap">
+    <h2>まだ、旅の途中。<br>一緒につくる仲間を待っています。</h2>
+    <p>本多病院は、コミュニティホスピタルとして生まれ変わっている最中です。決まりきった型はまだありません。だからこそ、自分の手でつくれる余白があります。見学だけでも、お気軽にどうぞ。</p>
+    <div class="acts">
+      <a class="btn btn-o" href="#">採用情報を見る</a>
+      <a class="btn btn-w" href="#">見学を申し込む</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== アクセス ===== -->
+<section id="access" class="paper">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-en">ACCESS</span><h2>アクセス・病院概要</h2></div>
+    <div class="access">
+      <div class="mapbox">GOOGLE MAP</div>
+      <dl class="info">
+        <div><dt>名称</dt><dd>医療法人社団 静恒会　本多病院</dd></div>
+        <div><dt>所在地</dt><dd>〒146-0094　東京都大田区東矢口1-17-15</dd></div>
+        <div><dt>電話</dt><dd style="font-family:var(--en);font-size:19px;letter-spacing:.02em">03-3732-2331<span style="font-family:var(--maru);font-size:12px;color:var(--muted);margin-left:10px">（代表）</span></dd></div>
+        <div><dt>FAX</dt><dd style="font-family:var(--en)">03-3732-2335</dd></div>
+        <div><dt>交通</dt><dd>東急池上線「蓮沼駅」より徒歩3分</dd></div>
+        <div><dt>関連施設</dt><dd>本多病院 ケアマネオフィス<br>介護老人保健施設 コージーハウスはすぬま</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="f-logo"><img src="images/hp_logo.png" alt="本多病院"></div>
+        <p style="font-size:13px;opacity:.78;margin:0;line-height:2">〒146-0094　東京都大田区東矢口1-17-15<br>東急池上線「蓮沼駅」より徒歩3分</p>
+        <p style="font-family:var(--en);font-size:22px;color:#fff;margin:18px 0 0;letter-spacing:.02em">03-3732-2331</p>
+        <p style="font-size:11px;opacity:.6;margin:2px 0 0">急患は24時間受付けます</p>
+      </div>
+      <div class="f-col"><h5>FOR PATIENTS</h5><ul>
+        <li><a href="#">外来のご案内</a></li><li><a href="#">入院・面会のご案内</a></li>
+        <li><a href="#">健診のご案内</a></li><li><a href="#">担当医表</a></li></ul></div>
+      <div class="f-col"><h5>ABOUT</h5><ul>
+        <li><a href="#">理念・院長あいさつ</a></li><li><a href="#">診療科・設備</a></li>
+        <li><a href="#">はたらく人</a></li><li><a href="#">関連施設</a></li></ul></div>
+      <div class="f-col"><h5>OTHERS</h5><ul>
+        <li><a href="#">お知らせ</a></li><li><a href="#">採用情報</a></li>
+        <li><a href="#">医療関係者の方へ</a></li><li><a href="#">個人情報保護方針</a></li></ul></div>
+    </div>
+    <div class="f-bottom">
+      <span>© 医療法人社団 静恒会 本多病院</span>
+      <span>※本ページはリニューアル検討用のモックアップです</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
