@@ -357,3 +357,7 @@ footer .f-col .soon{font-size:13px;opacity:.38;cursor:default}
 }
 @media(min-width:981px){ .navscrim{display:none} }
 @media(max-width:540px){ .f-top.f-6{grid-template-columns:1fr} }
+
+/* ---- 循環図（コミュニティホスピタル）---- */
+.cyclefig{margin:0 0 30px;padding:24px 10px;background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow-x:auto}
+.cyclefig svg{width:100%;min-width:560px;height:auto;display:block}
