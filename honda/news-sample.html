@@ -17,21 +17,62 @@
 <header>
   <div class="wrap hd">
     <a class="logo" href="index.html"><img src="images/hp_logo.png" alt="医療法人社団 静恒会 本多病院"></a>
-    <nav class="main">
-      <a href="gairai.html">外来</a>
-      <a href="zaitaku.html">在宅医療</a>
-      <a href="nyuin.html">入院・面会</a>
-      <a href="taisetsu.html">大切にしていること</a>
-      <a href="news.html" class='on'>お知らせ</a>
-      <a href="gaiyo.html">アクセス</a>
-    </nav>
+    <nav class="main"><ul class="navlist">
+      <li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">診療のこと</button>
+        <div class="navdrop"><ul>
+          <li><a href="gairai.html">外来</a></li>
+          <li><a href="zaitaku.html">在宅医療</a></li>
+          <li><a href="nyuin.html">入院・面会</a></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">わたしたちのこと</button>
+        <div class="navdrop"><ul>
+          <li><a href="taisetsu.html">大切にしていること</a></li>
+          <li><span class="soon">コミュニティホスピタル<em>準備中</em></span></li>
+          <li><a href="aisatsu.html">院長挨拶</a></li>
+          <li><span class="soon">本多病院の沿革<em>準備中</em></span></li>
+          <li><a href="gaiyo.html">法人概要</a></li>
+        </ul></div>
+      </li><li class="navcat on">
+        <button type="button" class="navtop" aria-expanded="false">新着情報</button>
+        <div class="navdrop"><ul>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><span class="soon">イベント・セミナー<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">医療福祉関係の方へ</button>
+        <div class="navdrop"><ul>
+          <li><span class="soon">わたしたちの想い<em>準備中</em></span></li>
+          <li><span class="soon">医療関係の方へ<em>準備中</em></span></li>
+          <li><span class="soon">ケアマネージャー、訪問看護の方々へ<em>準備中</em></span></li>
+          <li><span class="soon">地域の社会福祉関係の団体や活動をされている方へ<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">地域のこと</button>
+        <div class="navdrop"><ul>
+          <li><span class="soon">つながる仲間たち<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">本多病院で働く</button>
+        <div class="navdrop"><ul>
+          <li><span class="soon">看護師（病棟）<em>準備中</em></span></li>
+          <li><span class="soon">看護師（在宅）<em>準備中</em></span></li>
+          <li><span class="soon">リハビリ（ST）<em>準備中</em></span></li>
+          <li><span class="soon">医療事務<em>準備中</em></span></li>
+          <li><span class="soon">救急救命士<em>準備中</em></span></li>
+          <li><span class="soon">医療ソーシャルワーカー<em>準備中</em></span></li>
+          <li><span class="soon">スタッフの声<em>準備中</em></span></li>
+        </ul></div>
+      </li>
+    </ul></nav>
     <div class="hd-tel"><a href="tel:0337322331">03-3732-2331</a><span>代表／急患24時間受付</span></div>
-    <a class="btn btn-o" href="gaiyo.html#contact">お問い合わせ</a>
-    <button class="menubtn" aria-label="メニュー">☰</button>
+    <button class="menubtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
   </div>
 </header>
+<div class="navscrim" hidden></div>
 
-<div class="crumb"><div class="wrap"><a href="index.html">ホーム</a><span>›</span>お知らせ</div></div>
+<div class="crumb"><div class="wrap"><a href="index.html">ホーム</a><span>›</span>新着情報｜お知らせ</div></div>
 <section>
   <div class="wrap">
     <div class="doc">
@@ -78,28 +119,20 @@
 
 <footer>
   <div class="wrap">
-    <div class="f-top">
-      <div>
+    <div class="f-top f-6">
+      <div class="f-brand">
         <div class="f-logo"><img src="images/hp_logo.png" alt="本多病院"></div>
         <p style="font-size:13px;opacity:.78;margin:0;line-height:2">〒146-0094　東京都大田区東矢口1-17-15<br>東急池上線「蓮沼駅」より徒歩3分</p>
         <p style="font-family:var(--en);font-size:22px;color:#fff;margin:18px 0 0;letter-spacing:.02em">03-3732-2331</p>
         <p style="font-size:11px;opacity:.6;margin:2px 0 0">急患は24時間受付けます</p>
       </div>
-      <div class="f-col"><h5>FOR PATIENTS</h5><ul>
-        <li><a href="gairai.html">外来のご案内</a></li>
-        <li><a href="zaitaku.html">在宅医療のご案内</a></li>
-        <li><a href="nyuin.html">入院・面会のご案内</a></li>
-        <li><a href="index.html#sched">診療受付時間</a></li></ul></div>
-      <div class="f-col"><h5>ABOUT</h5><ul>
-        <li><a href="taisetsu.html">大切にしていること</a></li>
-        <li><a href="aisatsu.html">院長あいさつ</a></li>
-        <li><a href="index.html#depts">診療科・設備</a></li>
-        <li><a href="gaiyo.html">法人概要・アクセス</a></li></ul></div>
-      <div class="f-col"><h5>OTHERS</h5><ul>
-        <li><a href="news.html">お知らせ</a></li>
-        <li><a href="index.html#recruit">採用情報</a></li>
-        <li><a href="gaiyo.html#contact">お問い合わせ</a></li>
-        <li><a href="#">個人情報保護方針</a></li></ul></div>
+      <div class="f-col"><h5>診療のこと</h5><ul>
+        <li><a href="gairai.html">外来</a></li><li><a href="zaitaku.html">在宅医療</a></li><li><a href="nyuin.html">入院・面会</a></li></ul></div><div class="f-col"><h5>わたしたちのこと</h5><ul>
+        <li><a href="taisetsu.html">大切にしていること</a></li><li><span class="soon">コミュニティホスピタル</span></li><li><a href="aisatsu.html">院長挨拶</a></li><li><span class="soon">本多病院の沿革</span></li><li><a href="gaiyo.html">法人概要</a></li></ul></div><div class="f-col"><h5>新着情報</h5><ul>
+        <li><a href="news.html">お知らせ</a></li><li><span class="soon">イベント・セミナー</span></li></ul></div><div class="f-col"><h5>医療福祉関係の方へ</h5><ul>
+        <li><span class="soon">わたしたちの想い</span></li><li><span class="soon">医療関係の方へ</span></li><li><span class="soon">ケアマネージャー、訪問看護の方々へ</span></li><li><span class="soon">地域の社会福祉関係の団体や活動をされている方へ</span></li></ul></div><div class="f-col"><h5>地域のこと</h5><ul>
+        <li><span class="soon">つながる仲間たち</span></li></ul></div><div class="f-col"><h5>本多病院で働く</h5><ul>
+        <li><span class="soon">看護師（病棟）</span></li><li><span class="soon">看護師（在宅）</span></li><li><span class="soon">リハビリ（ST）</span></li><li><span class="soon">医療事務</span></li><li><span class="soon">救急救命士</span></li><li><span class="soon">医療ソーシャルワーカー</span></li><li><span class="soon">スタッフの声</span></li></ul></div>
     </div>
     <div class="f-bottom">
       <span>© 医療法人社団 静恒会 本多病院</span>
@@ -107,5 +140,38 @@
     </div>
   </div>
 </footer>
+
+<script>
+// スマホ用メニューの開閉
+(function () {
+  var btn = document.querySelector('.menubtn');
+  var nav = document.querySelector('nav.main');
+  var scrim = document.querySelector('.navscrim');
+  if (!btn || !nav) return;
+
+  function close() {
+    document.body.classList.remove('navopen');
+    btn.setAttribute('aria-expanded', 'false');
+    if (scrim) scrim.hidden = true;
+  }
+  btn.addEventListener('click', function () {
+    var open = document.body.classList.toggle('navopen');
+    btn.setAttribute('aria-expanded', String(open));
+    if (scrim) scrim.hidden = !open;
+  });
+  if (scrim) scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+  // スマホではカテゴリをアコーディオンで開閉する
+  nav.querySelectorAll('.navtop').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (window.matchMedia('(min-width: 981px)').matches) return;
+      var li = b.closest('.navcat');
+      var open = li.classList.toggle('open');
+      b.setAttribute('aria-expanded', String(open));
+    });
+  });
+})();
+</script>
 </body>
 </html>
