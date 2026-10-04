@@ -8,206 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#2B2A28;
-  --gray:#4D4D4D;
-  --muted:#8A8781;
-  --line:#E6E3DD;
-  --paper:#FBFAF7;
-  --orange:#E87818;
-  --orange-soft:#FDF2E6;
-  --maru:"Zen Maru Gothic",'Hiragino Maru Gothic ProN','Hiragino Sans','Yu Gothic',sans-serif;
-  --en:"Raleway","Zen Maru Gothic",sans-serif;
-  --maxw:1140px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--maru);color:var(--gray);background:#fff;font-size:15.5px;line-height:2.0;letter-spacing:.06em;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.narrow{max-width:840px;margin:0 auto;padding:0 28px}
-
-.mockbar{background:#B3261E;color:#fff;font-size:12.5px;padding:11px 16px;text-align:center;letter-spacing:.06em;line-height:1.8;position:relative;z-index:100}
-.mockbar b{color:#FFE08A}
-
-/* ---- header ---- */
-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;gap:28px;height:80px}
-.hd .logo img{height:44px;width:auto}
-nav.main{margin-left:auto;display:flex;gap:28px;font-size:13.5px;letter-spacing:.08em}
-nav.main a{text-decoration:none;color:var(--ink);padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
-nav.main a:hover{border-color:var(--orange);color:var(--orange)}
-.hd-tel{text-align:right;line-height:1.5}
-.hd-tel a{font-family:var(--en);font-size:21px;color:var(--ink);text-decoration:none;font-weight:600;letter-spacing:.02em}
-.hd-tel span{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;border-radius:999px;text-decoration:none;font-size:13.5px;letter-spacing:.1em;transition:.25s;border:1px solid transparent;white-space:nowrap}
-.btn-o{background:var(--orange);color:#fff}
-.btn-o:hover{background:#CF670D}
-.btn-line{border-color:var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:#fff}
-.btn-w{background:#fff;color:var(--ink)}
-.btn-w:hover{background:var(--orange);color:#fff}
-.menubtn{display:none;background:none;border:0;font-size:22px;color:var(--ink);cursor:pointer;margin-left:auto}
-
-/* ---- hero ---- */
-.hero{position:relative;height:min(84vh,660px);overflow:hidden;background:#ddd}
-.hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.62) brightness(.72) contrast(1.02)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,18,14,.84) 0%,rgba(22,18,14,.58) 45%,rgba(22,18,14,.14) 82%,rgba(22,18,14,0) 100%)}
-.hero-txt{position:absolute;inset:0;z-index:3;display:flex;align-items:center}
-.hero-txt .eyebrow{font-family:var(--en);font-size:11px;letter-spacing:.34em;color:#FFC178;margin-bottom:26px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
-.hero-txt h1{font-size:clamp(22px,3.5vw,34px);line-height:2.1;letter-spacing:.12em;color:#fff;font-weight:500;margin:0 0 30px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
-.hero-txt p{color:#fff;max-width:470px;font-size:14.5px;line-height:2.1;margin:0 0 34px;text-shadow:0 1px 14px rgba(0,0,0,.55)}
-.hero-note{position:absolute;right:14px;bottom:10px;z-index:4;font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.08em}
-
-/* ---- hours bar ---- */
-.hours{background:var(--paper);border-bottom:1px solid var(--line)}
-.hours .wrap{display:flex;align-items:center;gap:30px;padding-top:22px;padding-bottom:22px;flex-wrap:wrap;font-size:13.5px}
-.hours .lab{font-size:12px;letter-spacing:.16em;color:var(--muted)}
-.hours b{color:var(--ink);font-family:var(--en);font-size:16px;letter-spacing:.04em}
-.hours .emg{margin-left:auto;display:inline-flex;align-items:center;gap:9px;background:var(--orange-soft);color:#B75E0C;padding:9px 20px;border-radius:999px;font-size:12.5px;letter-spacing:.08em}
-.hours .emg::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
-
-/* ---- section ---- */
-section{padding:110px 0}
-.sec-head{margin-bottom:52px}
-.sec-head.center{text-align:center}
-.sec-en{display:block;font-family:var(--en);font-size:10.5px;letter-spacing:.36em;color:var(--orange);margin-bottom:14px}
-.sec-head h2{font-size:clamp(21px,2.6vw,29px);line-height:1.85;letter-spacing:.16em;color:var(--ink);font-weight:500;margin:0}
-.sec-head .lead{font-size:14.5px;color:var(--gray);margin:20px 0 0;max-width:640px;line-height:2.1}
-.sec-head.center .lead{margin-left:auto;margin-right:auto}
-.paper{background:var(--paper)}
-
-/* ---- philosophy ---- */
-.philo{text-align:center;padding:120px 0}
-.philo .mark{width:52px;margin:0 auto 34px;opacity:.9}
-.philo p{font-size:clamp(16px,2.1vw,20px);line-height:2.5;letter-spacing:.14em;color:var(--ink);margin:0 0 30px}
-.philo .sign{font-size:13px;color:var(--muted);letter-spacing:.1em;margin-top:44px}
-
-/* ---- gates ---- */
-.gates{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.gate{text-decoration:none;display:block;group:none}
-.gate .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden;margin-bottom:22px;background:#eee}
-.gate .ph img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1);filter:saturate(.88)}
-.gate:hover .ph img{transform:scale(1.06)}
-.gate .en{font-family:var(--en);font-size:10px;letter-spacing:.3em;color:var(--orange);display:block;margin-bottom:9px}
-.gate h3{font-size:20px;letter-spacing:.14em;color:var(--ink);margin:0 0 10px;font-weight:500;display:flex;align-items:center;gap:12px}
-.gate h3 svg{flex:none}
-.gate p{font-size:13.5px;color:var(--muted);margin:0 0 14px;line-height:1.95}
-.gate .go{font-size:12.5px;letter-spacing:.12em;color:var(--ink);display:inline-flex;align-items:center;gap:10px}
-.gate .go::after{content:"";width:22px;height:1px;background:var(--orange);transition:.3s}
-.gate:hover .go::after{width:38px}
-
-/* ---- news ---- */
-.news-grid{display:grid;grid-template-columns:270px 1fr;gap:60px;align-items:start}
-.newslist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.newslist li{border-bottom:1px solid var(--line)}
-.newslist a{display:flex;gap:22px;align-items:baseline;padding:22px 2px;text-decoration:none;flex-wrap:wrap;transition:.25s}
-.newslist a:hover{padding-left:10px}
-.newslist time{font-family:var(--en);font-size:13px;color:var(--muted);letter-spacing:.06em;white-space:nowrap}
-.tag{font-size:10.5px;padding:3px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);letter-spacing:.1em;white-space:nowrap}
-.tag.imp{background:var(--orange);border-color:var(--orange);color:#fff}
-.newslist .ttl{font-size:14.5px;flex:1;min-width:210px;color:var(--ink);line-height:1.85}
-.newslist a:hover .ttl{color:var(--orange)}
-
-/* ---- community (photo band) ---- */
-.band{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{text-decoration:none;display:block}
-.card .ph{aspect-ratio:3/2;overflow:hidden;border-radius:4px;margin-bottom:18px;background:#eee}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1);filter:saturate(.88)}
-.card:hover .ph img{transform:scale(1.05)}
-.card .meta{font-family:var(--en);font-size:11px;color:var(--muted);letter-spacing:.14em;margin-bottom:7px}
-.card h4{font-size:15.5px;letter-spacing:.1em;color:var(--ink);margin:0 0 8px;font-weight:500;line-height:1.85}
-.card p{font-size:13px;color:var(--muted);margin:0;line-height:1.9}
-
-/* ---- split ---- */
-.split{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
-.split.rev{direction:rtl}
-.split.rev>*{direction:ltr}
-.split .ph{border-radius:4px;overflow:hidden;background:#eee}
-.split .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.88)}
-.split h3{font-size:clamp(19px,2.3vw,25px);letter-spacing:.14em;color:var(--ink);margin:0 0 24px;font-weight:500;line-height:2}
-.split p{font-size:14.5px;line-height:2.15;margin:0 0 22px}
-
-/* ---- schedule table ---- */
-.tablewrap{overflow-x:auto}
-table.sched{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;background:#fff}
-table.sched th,table.sched td{padding:17px 10px;text-align:center;border-bottom:1px solid var(--line)}
-table.sched thead th{font-family:var(--en);font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:500;border-bottom:1px solid var(--ink)}
-table.sched thead th:first-child{text-align:left;padding-left:4px;font-family:var(--maru)}
-table.sched tbody th{text-align:left;padding-left:4px;font-weight:400;color:var(--ink);white-space:nowrap;letter-spacing:.1em}
-table.sched tbody th small{display:block;font-family:var(--en);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-table.sched td{font-size:15px;color:var(--orange)}
-table.sched td.off{color:#D5D2CC}
-.note{font-size:12.5px;color:var(--muted);margin-top:22px;line-height:2}
-
-/* ---- depts ---- */
-.depts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:56px}
-.depts span{border:1px solid var(--line);padding:11px 22px;border-radius:999px;font-size:13.5px;letter-spacing:.08em;color:var(--ink)}
-.depts span.main{border-color:var(--orange);color:var(--orange)}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-.feat .ic{margin-bottom:18px}
-.feat h3{font-size:16px;letter-spacing:.12em;color:var(--ink);margin:0 0 12px;font-weight:500;line-height:1.9}
-.feat p{font-size:13.5px;color:var(--muted);margin:0;line-height:2}
-
-/* ---- people ---- */
-.people{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-.person{text-decoration:none;display:block}
-.person .ph{aspect-ratio:3/4;border-radius:4px;overflow:hidden;background:linear-gradient(150deg,#F2EFE9,#E4E0D8);margin-bottom:16px;display:flex;align-items:center;justify-content:center;color:#A39D92;font-family:var(--en);font-size:11px;letter-spacing:.22em}
-.person .ph img{width:100%;height:100%;object-fit:cover;transition:.7s;filter:saturate(.88)}
-.person:hover .ph img{transform:scale(1.05)}
-.person .role{font-size:11.5px;color:var(--orange);letter-spacing:.14em;margin-bottom:5px}
-.person .nm{font-size:17px;letter-spacing:.14em;color:var(--ink)}
-.person .dept{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.08em}
-
-/* ---- recruit ---- */
-.recruit{position:relative;min-height:440px;display:flex;align-items:center;overflow:hidden}
-.recruit>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.66)}
-.recruit::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(22,18,14,.74) 0%,rgba(22,18,14,.46) 50%,rgba(22,18,14,.06) 100%)}
-.recruit .wrap{position:relative;z-index:3;color:#fff}
-.recruit h2{font-size:clamp(21px,2.8vw,30px);line-height:2.1;letter-spacing:.14em;font-weight:500;margin:0 0 24px;text-shadow:0 2px 18px rgba(0,0,0,.3)}
-.recruit p{color:#fff;max-width:480px;margin:0 0 34px;font-size:14.5px;line-height:2.1;text-shadow:0 1px 14px rgba(0,0,0,.5)}
-.recruit .acts{display:flex;gap:14px;flex-wrap:wrap}
-
-/* ---- access ---- */
-.access{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.mapbox{aspect-ratio:4/3;background:var(--paper);border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--en);font-size:11px;letter-spacing:.2em}
-dl.info{margin:0}
-dl.info div{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
-dl.info dt{font-size:12px;color:var(--muted);letter-spacing:.14em;padding-top:3px}
-dl.info dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.95}
-
-/* ---- footer ---- */
-footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;font-size:13.5px;letter-spacing:.06em}
-.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)}
-.f-logo{margin-bottom:20px}
-.f-logo img{height:40px;filter:brightness(0) invert(1);opacity:.92}
-.f-col h5{font-family:var(--en);font-size:10.5px;letter-spacing:.28em;color:#FFC178;margin:0 0 18px;font-weight:500}
-.f-col ul{list-style:none;margin:0;padding:0}
-.f-col li{margin-bottom:12px}
-.f-col a{text-decoration:none;font-size:13px;opacity:.82;transition:.25s}
-.f-col a:hover{opacity:1;color:#FFC178}
-.f-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:11px;opacity:.5;flex-wrap:wrap;gap:10px;letter-spacing:.08em}
-
-@media(max-width:980px){
-  .gates,.band,.feats{grid-template-columns:1fr}
-  .people{grid-template-columns:repeat(2,1fr)}
-  .news-grid,.access,.split{grid-template-columns:1fr;gap:32px}
-  .split.rev{direction:ltr}
-  .f-top{grid-template-columns:1fr 1fr}
-  nav.main,.hd-tel,.hd .btn{display:none}
-  .menubtn{display:block}
-  section{padding:70px 0}
-  .philo{padding:80px 0}
-  .hours .emg{margin-left:0}
-}
-@media(max-width:540px){
-  .people{grid-template-columns:1fr 1fr}
-  .f-top{grid-template-columns:1fr}
-  body{font-size:15px}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -217,12 +18,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;fon
   <div class="wrap hd">
     <a class="logo" href="#"><img src="images/hp_logo.png" alt="医療法人社団 静恒会 本多病院"></a>
     <nav class="main">
-      <a href="#gates">はじめての方へ</a>
-      <a href="#sched">診療時間</a>
-      <a href="#rehab">リハビリ</a>
-      <a href="#community">地域とともに</a>
-      <a href="#people">はたらく人</a>
-      <a href="#access">アクセス</a>
+      <a href="gairai.html">外来</a>
+      <a href="zaitaku.html">在宅医療</a>
+      <a href="nyuin.html">入院・面会</a>
+      <a href="taisetsu.html">大切にしていること</a>
+      <a href="news.html">お知らせ</a>
+      <a href="gaiyo.html">アクセス</a>
     </nav>
     <div class="hd-tel"><a href="tel:0337322331">03-3732-2331</a><span>代表／急患24時間受付</span></div>
     <a class="btn btn-o" href="#recruit">採用情報</a>
@@ -274,21 +75,21 @@ footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;fon
       <p class="lead">通院する・家に来てもらう・入院する。暮らしの状態に合わせて、必要な医療を選べます。</p>
     </div>
     <div class="gates">
-      <a class="gate" href="#">
+      <a class="gate" href="gairai.html">
         <div class="ph"><img src="images/hp_kv03.jpg" alt="本多病院 受付・待合"></div>
         <span class="en">OUTPATIENT</span>
         <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>通院する／外来</h3>
         <p>初診の流れ・持ち物・各診療科の担当医表</p>
         <span class="go">外来のご案内</span>
       </a>
-      <a class="gate" href="#">
+      <a class="gate" href="zaitaku.html">
         <div class="ph"><img src="images/04_mimamori.jpeg" alt="本多病院 在宅医療・地域連携"></div>
         <span class="en">HOME CARE</span>
         <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M12 11.6c-1.2-1.2-3 0-2.2 1.6.5 1 2.2 2.1 2.2 2.1s1.7-1.1 2.2-2.1c.8-1.6-1-2.8-2.2-1.6z"/></svg>家に来てもらう／在宅医療</h3>
         <p>訪問診療の対象・ご相談の流れ・対応エリア</p>
         <span class="go">在宅医療のご案内</span>
       </a>
-      <a class="gate" href="#">
+      <a class="gate" href="nyuin.html">
         <div class="ph"><img src="images/15_gyojishoku.jpg" alt="本多病院 行事食"></div>
         <span class="en">ADMISSION</span>
         <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E87818" stroke-width="1.4"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18M6 10V7a2 2 0 0 1 2-2h3v5"/></svg>入院する／入院・面会</h3>
@@ -307,7 +108,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;fon
       <span class="sec-en">NEWS</span>
       <h2>お知らせ</h2>
       <p class="lead" style="font-size:13.5px">休診・診療体制の変更などをお伝えします。</p>
-      <a class="btn btn-line" style="margin-top:26px" href="#">お知らせ一覧へ</a>
+      <a class="btn btn-line" style="margin-top:26px" href="news.html">お知らせ一覧へ</a>
     </div>
     <ul class="newslist">
       <li><a href="#"><time>2026.09.10</time><span class="tag imp">重要</span><span class="ttl">〇月〇日（〇）の外来診療体制変更について</span></a></li>
@@ -468,13 +269,13 @@ footer{background:var(--ink);color:rgba(255,255,255,.72);padding:80px 0 30px;fon
         <p style="font-size:11px;opacity:.6;margin:2px 0 0">急患は24時間受付けます</p>
       </div>
       <div class="f-col"><h5>FOR PATIENTS</h5><ul>
-        <li><a href="#">外来のご案内</a></li><li><a href="#">在宅医療のご案内</a></li><li><a href="#">入院・面会のご案内</a></li>
+        <li><a href="gairai.html">外来のご案内</a></li><li><a href="zaitaku.html">在宅医療のご案内</a></li><li><a href="nyuin.html">入院・面会のご案内</a></li>
         <li><a href="#">健診のご案内</a></li><li><a href="#">担当医表</a></li></ul></div>
       <div class="f-col"><h5>ABOUT</h5><ul>
-        <li><a href="#">理念・院長あいさつ</a></li><li><a href="#">診療科・設備</a></li>
-        <li><a href="#">はたらく人</a></li><li><a href="#">関連施設</a></li></ul></div>
+        <li><a href="taisetsu.html">大切にしていること</a></li><li><a href="aisatsu.html">院長あいさつ</a></li><li><a href="#">診療科・設備</a></li>
+        <li><a href="#">はたらく人</a></li><li><a href="gaiyo.html">法人概要・アクセス</a></li></ul></div>
       <div class="f-col"><h5>OTHERS</h5><ul>
-        <li><a href="#">お知らせ</a></li><li><a href="#">採用情報</a></li>
+        <li><a href="news.html">お知らせ</a></li><li><a href="#">採用情報</a></li>
         <li><a href="#">医療関係者の方へ</a></li><li><a href="#">個人情報保護方針</a></li></ul></div>
     </div>
     <div class="f-bottom">
