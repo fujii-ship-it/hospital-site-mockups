@@ -4,200 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-<title>コージーハウスはすぬま リニューアル案</title>
+<title>大田区蓮沼の介護老人保健施設｜コージーハウスはすぬま（リニューアル案）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#33302B;
-  --gray:#55514B;
-  --muted:#8E897F;
-  --line:#E8E3DA;
-  --paper:#FBF8F3;
-  --orange:#F08C00;
-  --orange-dk:#D47A00;
-  --orange-sf:#FEF3E2;
-  --sky:#50AADC;
-  --sky-sf:#E9F5FC;
-  --maru:"Zen Maru Gothic",'Hiragino Maru Gothic ProN','Hiragino Sans','Yu Gothic',sans-serif;
-  --en:"Raleway","Zen Maru Gothic",sans-serif;
-  --maxw:1140px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--maru);color:var(--gray);background:#fff;font-size:15.5px;line-height:2.0;letter-spacing:.06em;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.narrow{max-width:860px;margin:0 auto;padding:0 28px}
-
-.mockbar{background:#B3261E;color:#fff;font-size:12.5px;padding:11px 16px;text-align:center;letter-spacing:.06em;line-height:1.8;position:relative;z-index:100}
-.mockbar b{color:#FFE08A}
-
-/* header */
-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;gap:26px;height:82px}
-.hd .logo img{height:46px;width:auto}
-nav.main{margin-left:auto;display:flex;gap:26px;font-size:13.5px;letter-spacing:.08em}
-nav.main a{text-decoration:none;color:var(--ink);padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
-nav.main a:hover{border-color:var(--orange);color:var(--orange-dk)}
-.hd-tel{text-align:right;line-height:1.5}
-.hd-tel a{font-family:var(--en);font-size:21px;color:var(--ink);text-decoration:none;font-weight:600;letter-spacing:.02em}
-.hd-tel span{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;border-radius:999px;text-decoration:none;font-size:13.5px;letter-spacing:.1em;transition:.25s;border:1px solid transparent;white-space:nowrap}
-.btn-o{background:var(--orange);color:#fff}
-.btn-o:hover{background:var(--orange-dk)}
-.btn-s{background:var(--sky);color:#fff}
-.btn-s:hover{background:#3B95C8}
-.btn-line{border-color:var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:#fff}
-.btn-w{background:#fff;color:var(--ink)}
-.btn-w:hover{background:var(--orange);color:#fff}
-.menubtn{display:none;background:none;border:0;font-size:22px;color:var(--ink);cursor:pointer;margin-left:auto}
-
-/* hero */
-.hero{position:relative;height:min(80vh,620px);overflow:hidden;background:#ddd}
-.hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.78)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(40,30,18,.76) 0%,rgba(40,30,18,.48) 45%,rgba(40,30,18,.10) 84%,rgba(40,30,18,0) 100%)}
-.hero-txt{position:absolute;inset:0;z-index:3;display:flex;align-items:center}
-.hero-txt .eyebrow{font-family:var(--en);font-size:11px;letter-spacing:.32em;color:#FFD08A;margin-bottom:24px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
-.hero-txt h1{font-size:clamp(21px,3.3vw,32px);line-height:2.1;letter-spacing:.12em;color:#fff;font-weight:500;margin:0 0 28px;text-shadow:0 2px 20px rgba(0,0,0,.4)}
-.hero-txt p{color:#fff;max-width:460px;font-size:14.5px;line-height:2.1;margin:0 0 32px;text-shadow:0 1px 14px rgba(0,0,0,.55)}
-.hero-acts{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{position:absolute;right:14px;bottom:10px;z-index:4;font-size:10px;color:rgba(255,255,255,.55)}
-
-/* facts bar */
-.facts{background:var(--paper);border-bottom:1px solid var(--line)}
-.facts .wrap{display:flex;align-items:center;gap:34px;padding:22px 28px;flex-wrap:wrap;font-size:13.5px}
-.facts .it b{font-family:var(--en);font-size:19px;color:var(--ink);letter-spacing:.02em;margin-right:4px}
-.facts .lab{font-size:11.5px;color:var(--muted);letter-spacing:.14em;display:block}
-.facts .vac{margin-left:auto;display:inline-flex;align-items:center;gap:9px;background:var(--sky-sf);color:#1F6F9C;padding:10px 22px;border-radius:999px;font-size:12.5px;letter-spacing:.08em;text-decoration:none;transition:.25s}
-.facts .vac:hover{background:var(--sky);color:#fff}
-.facts .vac::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sky)}
-
-section{padding:106px 0}
-.sec-head{margin-bottom:50px}
-.sec-head.center{text-align:center}
-.sec-en{display:block;font-family:var(--en);font-size:10.5px;letter-spacing:.36em;color:var(--orange);margin-bottom:14px}
-.sec-en.sky{color:var(--sky)}
-.sec-head h2{font-size:clamp(21px,2.6vw,29px);line-height:1.85;letter-spacing:.16em;color:var(--ink);font-weight:500;margin:0}
-.sec-head .lead{font-size:14.5px;color:var(--gray);margin:20px 0 0;max-width:660px;line-height:2.1}
-.sec-head.center .lead{margin-left:auto;margin-right:auto}
-.paper{background:var(--paper)}
-
-/* philosophy */
-.philo{text-align:center;padding:116px 0}
-.philo .mark{width:56px;margin:0 auto 34px;display:block}
-.philo p{font-size:clamp(16px,2.1vw,20px);line-height:2.5;letter-spacing:.14em;color:var(--ink);margin:0 0 28px}
-.philo .sign{font-size:13px;color:var(--muted);letter-spacing:.1em;margin-top:40px}
-
-/* services */
-.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.svc{text-decoration:none;display:block}
-.svc .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden;margin-bottom:22px;background:#eee}
-.svc .ph img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1);filter:saturate(.9)}
-.svc:hover .ph img{transform:scale(1.06)}
-.svc .en{font-family:var(--en);font-size:10px;letter-spacing:.3em;color:var(--orange);display:block;margin-bottom:9px}
-.svc h3{font-size:19px;letter-spacing:.13em;color:var(--ink);margin:0 0 6px;font-weight:500}
-.svc .sub{font-size:12px;color:var(--sky);letter-spacing:.1em;margin-bottom:12px}
-.svc p{font-size:13.5px;color:var(--muted);margin:0 0 14px;line-height:1.95}
-.svc .go{font-size:12.5px;letter-spacing:.12em;color:var(--ink);display:inline-flex;align-items:center;gap:10px}
-.svc .go::after{content:"";width:22px;height:1px;background:var(--orange);transition:.3s}
-.svc:hover .go::after{width:38px}
-
-/* news */
-.news-grid{display:grid;grid-template-columns:270px 1fr;gap:58px;align-items:start}
-.newslist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.newslist li{border-bottom:1px solid var(--line)}
-.newslist a{display:flex;gap:22px;align-items:baseline;padding:22px 2px;text-decoration:none;flex-wrap:wrap;transition:.25s}
-.newslist a:hover{padding-left:10px}
-.newslist time{font-family:var(--en);font-size:13px;color:var(--muted);letter-spacing:.06em;white-space:nowrap}
-.tag{font-size:10.5px;padding:3px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);letter-spacing:.1em;white-space:nowrap}
-.tag.imp{background:var(--orange);border-color:var(--orange);color:#fff}
-.tag.sky{background:var(--sky-sf);border-color:var(--sky-sf);color:#1F6F9C}
-.newslist .ttl{font-size:14.5px;flex:1;min-width:210px;color:var(--ink);line-height:1.85}
-.newslist a:hover .ttl{color:var(--orange-dk)}
-
-/* split */
-.split{display:grid;grid-template-columns:1.05fr 1fr;gap:66px;align-items:center}
-.split .ph{border-radius:4px;overflow:hidden;background:#eee}
-.split .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.9)}
-.split h3{font-size:clamp(19px,2.3vw,25px);letter-spacing:.14em;color:var(--ink);margin:0 0 24px;font-weight:500;line-height:2}
-.split p{font-size:14.5px;line-height:2.15;margin:0 0 22px}
-.split .subph{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.split .subph img{aspect-ratio:4/3;object-fit:cover;border-radius:3px;filter:saturate(.9)}
-
-/* floors */
-.floors{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.floor .ph{aspect-ratio:3/2;overflow:hidden;border-radius:4px;margin-bottom:16px;background:#eee}
-.floor .ph img{width:100%;height:100%;object-fit:cover;transition:.7s;filter:saturate(.9)}
-.floor:hover .ph img{transform:scale(1.05)}
-.floor .num{font-family:var(--en);font-size:12px;letter-spacing:.2em;color:var(--sky);margin-bottom:6px}
-.floor h4{font-size:15.5px;letter-spacing:.1em;color:var(--ink);margin:0 0 7px;font-weight:500}
-.floor p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.9}
-
-/* events */
-.events{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.events figure{margin:0}
-.events img{aspect-ratio:1/1;object-fit:cover;border-radius:4px;transition:.7s;filter:saturate(.9)}
-.events figure:hover img{transform:scale(1.05)}
-.events figcaption{font-size:12px;color:var(--muted);margin-top:10px;letter-spacing:.08em}
-
-/* vacancy */
-.vacbox{background:var(--sky-sf);border-radius:10px;padding:52px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
-.vacbox h3{font-size:clamp(19px,2.3vw,24px);letter-spacing:.14em;color:#175A80;margin:0 0 16px;font-weight:500;line-height:1.95}
-.vacbox p{font-size:14px;color:#2C6B8C;margin:0;line-height:2.05}
-.vacstat{background:#fff;border-radius:8px;padding:26px 30px}
-.vacstat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;align-items:center}
-.vacstat dt{font-size:13px;color:var(--muted);letter-spacing:.1em}
-.vacstat dd{margin:0;font-size:15px;color:var(--ink);text-align:right}
-.vacstat dd b{font-family:var(--en);font-size:19px;color:var(--sky)}
-
-/* spec */
-dl.info{margin:0}
-dl.info div{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
-dl.info dt{font-size:12px;color:var(--muted);letter-spacing:.14em;padding-top:3px}
-dl.info dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.95}
-.access{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:start}
-.mapbox{aspect-ratio:4/3;background:#fff;border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--en);font-size:11px;letter-spacing:.2em}
-
-/* recruit */
-.recruit{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden}
-.recruit>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.7)}
-.recruit::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(40,30,18,.76) 0%,rgba(40,30,18,.46) 50%,rgba(40,30,18,.06) 100%)}
-.recruit .wrap{position:relative;z-index:3;color:#fff}
-.recruit h2{font-size:clamp(21px,2.8vw,29px);line-height:2.1;letter-spacing:.14em;font-weight:500;margin:0 0 22px;text-shadow:0 2px 18px rgba(0,0,0,.35)}
-.recruit p{color:#fff;max-width:470px;margin:0 0 32px;font-size:14.5px;line-height:2.1;text-shadow:0 1px 14px rgba(0,0,0,.5)}
-.recruit .acts{display:flex;gap:14px;flex-wrap:wrap}
-
-footer{background:var(--ink);color:rgba(255,255,255,.74);padding:78px 0 30px;font-size:13.5px;letter-spacing:.06em}
-.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
-.f-logo img{height:42px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:18px}
-.f-col h5{font-family:var(--en);font-size:10.5px;letter-spacing:.28em;color:#FFD08A;margin:0 0 18px;font-weight:500}
-.f-col ul{list-style:none;margin:0;padding:0}
-.f-col li{margin-bottom:12px}
-.f-col a{text-decoration:none;font-size:13px;opacity:.82;transition:.25s}
-.f-col a:hover{opacity:1;color:#FFD08A}
-.f-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:11px;opacity:.5;flex-wrap:wrap;gap:10px}
-
-@media(max-width:980px){
-  .svcs,.floors{grid-template-columns:1fr}
-  .events{grid-template-columns:1fr 1fr}
-  .news-grid,.access,.split,.vacbox{grid-template-columns:1fr;gap:30px}
-  .f-top{grid-template-columns:1fr 1fr}
-  nav.main,.hd-tel,.hd .btn{display:none}
-  .menubtn{display:block}
-  section{padding:70px 0}
-  .philo{padding:80px 0}
-  .facts .vac{margin-left:0}
-  .vacbox{padding:36px 26px}
-}
-@media(max-width:540px){
-  .f-top{grid-template-columns:1fr}
-  body{font-size:15px}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -205,20 +16,56 @@ footer{background:var(--ink);color:rgba(255,255,255,.74);padding:78px 0 30px;fon
 
 <header>
   <div class="wrap hd">
-    <a class="logo" href="#"><img src="images/cz_logo.png" alt="介護老人保健施設 コージーハウスはすぬま"></a>
-    <nav class="main">
-      <a href="#services">サービス</a>
-      <a href="#rehab">リハビリ</a>
-      <a href="#floors">館内のご案内</a>
-      <a href="#events">イベント</a>
-      <a href="#vacancy">空き情報</a>
-      <a href="#access">アクセス</a>
-    </nav>
-    <div class="hd-tel"><a href="tel:0357118220">03-5711-8220</a><span>受付／お問い合わせ</span></div>
-    <a class="btn btn-o" href="#contact">見学のお申込み</a>
-    <button class="menubtn" aria-label="メニュー">☰</button>
+    <a class="logo" href="index.html"><img src="images/cz_logo.png" alt="介護老人保健施設 コージーハウスはすぬま"></a>
+    <nav class="main"><ul class="navlist">
+      <li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">サービスのこと</button>
+        <div class="navdrop"><ul>
+          <li><a href="nyusho.html">入所</a></li>
+          <li><a href="short.html">ショートステイ</a></li>
+          <li><a href="daycare.html">通所リハビリテーション</a></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">わたしたちのこと</button>
+        <div class="navdrop"><ul>
+          <li><a href="taisetsu.html">大切にしていること</a></li>
+          <li><a href="shisetsu.html">施設紹介</a></li>
+          <li><a href="gaiyo.html">施設概要・アクセス</a></li>
+          <li><span class="soon">沿革<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">ご家族の方へ</button>
+        <div class="navdrop"><ul>
+          <li><a href="nagare.html">ご利用までの流れ</a></li>
+          <li><span class="soon">費用について<em>準備中</em></span></li>
+          <li><span class="soon">よくあるご質問<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">施設での暮らし</button>
+        <div class="navdrop"><ul>
+          <li><span class="soon">一日の過ごし方<em>準備中</em></span></li>
+          <li><span class="soon">お食事<em>準備中</em></span></li>
+          <li><span class="soon">行事・レクリエーション<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">新着情報</button>
+        <div class="navdrop"><ul>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><span class="soon">空き状況<em>準備中</em></span></li>
+        </ul></div>
+      </li><li class="navcat">
+        <button type="button" class="navtop" aria-expanded="false">コージーハウスで働く</button>
+        <div class="navdrop"><ul>
+          <li><span class="soon">募集職種<em>準備中</em></span></li>
+          <li><span class="soon">スタッフの声<em>準備中</em></span></li>
+        </ul></div>
+      </li>
+    </ul></nav>
+    <div class="hd-tel"><a href="tel:0357118220">03-5711-8220</a><span>代表／見学・ご相談受付</span></div>
+    <button class="menubtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
   </div>
 </header>
+<div class="navscrim" hidden></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -449,30 +296,61 @@ footer{background:var(--ink);color:rgba(255,255,255,.74);padding:78px 0 30px;fon
   </div>
 </section>
 
-<footer id="contact">
+<footer>
   <div class="wrap">
-    <div class="f-top">
-      <div>
+    <div class="f-top f-6">
+      <div class="f-brand">
         <div class="f-logo"><img src="images/cz_logo.png" alt="コージーハウスはすぬま"></div>
         <p style="font-size:13px;opacity:.78;margin:0;line-height:2">〒146-0094　東京都大田区東矢口3-8-11<br>東急池上線「蓮沼駅」より徒歩3分</p>
         <p style="font-family:var(--en);font-size:22px;color:#fff;margin:18px 0 0;letter-spacing:.02em">03-5711-8220</p>
         <p style="font-size:11px;opacity:.6;margin:2px 0 0">見学・ご相談はお気軽にどうぞ</p>
       </div>
-      <div class="f-col"><h5>SERVICES</h5><ul>
-        <li><a href="#">入所</a></li><li><a href="#">短期入所（ショートステイ）</a></li>
-        <li><a href="#">通所リハビリ（デイケア）</a></li><li><a href="#">利用空き情報</a></li></ul></div>
-      <div class="f-col"><h5>ABOUT</h5><ul>
-        <li><a href="#">コージーハウスはすぬまとは</a></li><li><a href="#">リハビリテーション</a></li>
-        <li><a href="#">館内のご案内</a></li><li><a href="#">イベント・レクリエーション</a></li></ul></div>
-      <div class="f-col"><h5>OTHERS</h5><ul>
-        <li><a href="#">新着情報</a></li><li><a href="#">採用情報</a></li>
-        <li><a href="#">関連施設（本多病院）</a></li><li><a href="#">個人情報保護方針</a></li></ul></div>
+      <div class="f-col"><h5>サービスのこと</h5><ul>
+        <li><a href="nyusho.html">入所</a></li><li><a href="short.html">ショートステイ</a></li><li><a href="daycare.html">通所リハビリテーション</a></li></ul></div><div class="f-col"><h5>わたしたちのこと</h5><ul>
+        <li><a href="taisetsu.html">大切にしていること</a></li><li><a href="shisetsu.html">施設紹介</a></li><li><a href="gaiyo.html">施設概要・アクセス</a></li><li><span class="soon">沿革</span></li></ul></div><div class="f-col"><h5>ご家族の方へ</h5><ul>
+        <li><a href="nagare.html">ご利用までの流れ</a></li><li><span class="soon">費用について</span></li><li><span class="soon">よくあるご質問</span></li></ul></div><div class="f-col"><h5>施設での暮らし</h5><ul>
+        <li><span class="soon">一日の過ごし方</span></li><li><span class="soon">お食事</span></li><li><span class="soon">行事・レクリエーション</span></li></ul></div><div class="f-col"><h5>新着情報</h5><ul>
+        <li><a href="news.html">お知らせ</a></li><li><span class="soon">空き状況</span></li></ul></div><div class="f-col"><h5>コージーハウスで働く</h5><ul>
+        <li><span class="soon">募集職種</span></li><li><span class="soon">スタッフの声</span></li></ul></div>
     </div>
     <div class="f-bottom">
-      <span>© 医療法人社団 静恒会 介護老人保健施設 コージーハウスはすぬま</span>
+      <span>© 介護老人保健施設 コージーハウスはすぬま</span>
       <span>※本ページはリニューアル検討用のモックアップです</span>
     </div>
   </div>
 </footer>
+
+<script>
+// スマホ用メニューの開閉
+(function () {
+  var btn = document.querySelector('.menubtn');
+  var nav = document.querySelector('nav.main');
+  var scrim = document.querySelector('.navscrim');
+  if (!btn || !nav) return;
+
+  function close() {
+    document.body.classList.remove('navopen');
+    btn.setAttribute('aria-expanded', 'false');
+    if (scrim) scrim.hidden = true;
+  }
+  btn.addEventListener('click', function () {
+    var open = document.body.classList.toggle('navopen');
+    btn.setAttribute('aria-expanded', String(open));
+    if (scrim) scrim.hidden = !open;
+  });
+  if (scrim) scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+  // スマホではカテゴリをアコーディオンで開閉する
+  nav.querySelectorAll('.navtop').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (window.matchMedia('(min-width: 981px)').matches) return;
+      var li = b.closest('.navcat');
+      var open = li.classList.toggle('open');
+      b.setAttribute('aria-expanded', String(open));
+    });
+  });
+})();
+</script>
 </body>
 </html>
