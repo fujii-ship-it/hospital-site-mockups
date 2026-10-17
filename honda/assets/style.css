@@ -365,3 +365,26 @@ footer .f-col .soon{font-size:13px;opacity:.38;cursor:default}
 /* ---- ヘッダー右上の小さめボタン（アクセス）---- */
 .btn-s{padding:10px 20px;font-size:12.5px;letter-spacing:.08em}
 @media(max-width:980px){ .hd-access{display:none} }
+
+/* ---- ドロップダウン内の第2階層（職種など）---- */
+.navdrop li.sub a,.navdrop li.sub .soon{padding-left:34px;font-size:13px;position:relative}
+.navdrop li.sub a::before,.navdrop li.sub .soon::before{content:"";position:absolute;left:19px;top:50%;
+  width:7px;height:1px;background:var(--line)}
+footer .f-col li.fsub{padding-left:12px}
+footer .f-col li.fsub a{font-size:12.5px;opacity:.68}
+@media(max-width:980px){ .navdrop li.sub a,.navdrop li.sub .soon{padding-left:54px} }
+
+/* ===== ヘッダーの折り返し防止（電話番号・ボタン・ロゴ）===== */
+@media(min-width:981px){
+  .hd{gap:18px}
+  .hd .logo{flex:0 0 auto}
+  .hd nav.main{flex:1 1 auto;min-width:0}
+  nav.main .navlist{flex-wrap:nowrap;justify-content:flex-end}
+  .navtop{padding:10px 10px;font-size:13px}
+  .hd-tel{flex:0 0 auto;white-space:nowrap}
+  .hd-tel a{white-space:nowrap;font-size:19px}
+  .hd .btn{flex:0 0 auto;white-space:nowrap}
+  /* 幅が足りない環境では電話番号を隠し、ボタンだけ残す */
+  @media(max-width:1240px){ .hd-tel{display:none} }
+  @media(max-width:1080px){ .navtop{padding:10px 7px;font-size:12.5px;letter-spacing:.03em} }
+}
